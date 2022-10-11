@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-body font-secondary text-lg text-grey font-medium;
+  }
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    @apply font-primary text-dark italic;
+  }
+  .h2 {
+    @apply font-black text-[46px];
+  }
+  .h3 {
+    @apply font-extrabold italic text-[40px];
+  }
+  .h4 {
+    @apply font-extrabold italic text-[26px] text-white;
+  }
+  .h5 {
+    @apply font-medium text-[22px] text-white;
+  }
+  .pretitle {
+    @apply font-primary font-bold text-base uppercase tracking-[-0.04em] text-accent mb-4;
+  }
+}
