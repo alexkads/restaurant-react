@@ -26,10 +26,14 @@ module.exports = {
           DEFAULT: '#3686867',
           100: '#e4e4e3',
         },
-        accent: '#fe7634',
+        accent: {
+          DEFAULT: '#fe7634',
+          hover: '#d86128',
+        },
       },
       backgroundImage: {
         pattern: "url('assets/img/body-bg-pattern.png')",
+        hero: "url('assets/img/hero/bg.png')",
       },
     },
   },
