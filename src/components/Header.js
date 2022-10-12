@@ -54,7 +54,7 @@ const Header = () => {
           <div
             className={`${
               navMobile ? 'bg-accent gap-y-0' : 'bg-transparent gap-y-2'
-            } flex flex-col items-center justify-center w-12 h-12 order-2 lg:order-none`}
+            } flex flex-col items-center justify-center w-12 h-12 order-2 lg:order-none cursor-pointer`}
             onClick={() => setNavMobile(!navMobile)}
           >
             <motion.div
@@ -83,7 +83,7 @@ const Header = () => {
             variants={navMobileVariants}
             initial='hidden'
             animate={navMobile ? 'show' : ''}
-            className='bg-accent w-[310px] absolute h-[50vh] right-0 lg:left-0 top-[20vh] bottom-0 z-50'
+            className='bg-accent w-[310px] absolute h-[50vh] right-0 lg:left-0 top-[20vh] bottom-0 z-50 rounded-lg'
           >
             <NavMobile />
           </motion.div>
