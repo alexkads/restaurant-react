@@ -26,7 +26,8 @@ export const opacity = {
   },
   show: {
     opacity: 1,
-    rotate: 0,
-    type: 'spring',
+    transition: {
+      type: 'spring',
+    },
   },
 };

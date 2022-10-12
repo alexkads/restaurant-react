@@ -5,13 +5,14 @@ import { heroData } from '../data.js';
 import { motion } from 'framer-motion';
 // import fade in
 import { fadeIn, opacity } from '../variants';
+import Header from './Header.js';
 
 const staggerContainer = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.3,
-      delayChildren: 0.2,
+      staggerChildren: 0.5,
+      delayChildren: 0.3,
     },
   },
 };
@@ -21,6 +22,7 @@ const Hero = () => {
   const { pretitle, title, subtitle, btnText } = heroData;
   return (
     <section className='bg-hero min-h-[980px] bg-cover bg-right'>
+      <Header />
       <div className='container mx-auto min-h-[980px] flex justify-center items-center'>
         {/* text */}
         <motion.div
