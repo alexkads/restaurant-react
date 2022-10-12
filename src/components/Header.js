@@ -49,12 +49,12 @@ const Header = () => {
   return (
     <header className='fixed w-full max-w-[1800px]'>
       <div className='container mx-auto'>
-        <div className='text-white flex justify-between items-center py-[70px]'>
+        <div className='text-white flex justify-between items-center py-[70px] px-4 lg:px-0'>
           {/* menu btn */}
           <div
             className={`${
               navMobile ? 'bg-accent gap-y-0' : 'bg-transparent gap-y-2'
-            } flex flex-col items-center justify-center w-12 h-12 `}
+            } flex flex-col items-center justify-center w-12 h-12 order-2 lg:order-none`}
             onClick={() => setNavMobile(!navMobile)}
           >
             <motion.div
@@ -71,17 +71,19 @@ const Header = () => {
             ></motion.div>
           </div>
           {/* logo */}
-          <div>
-            <img src={LogoWhite} alt='' />
+          <div className='order-1 lg:order-none'>
+            <a href='#'>
+              <img src={LogoWhite} alt='' />
+            </a>
           </div>
           {/* social icons */}
-          <div>social icons</div>
+          <div className='hidden lg:flex'>social icons</div>
           {/* nav mobile */}
           <motion.div
             variants={navMobileVariants}
             initial='hidden'
             animate={navMobile ? 'show' : ''}
-            className='bg-accent w-[310px] absolute h-screen xl:left-0 top-0 bottom-0 z-10'
+            className='bg-accent w-[310px] absolute h-screen left-0 top-0 bottom-0 z-10'
           >
             <NavMobile />
           </motion.div>
