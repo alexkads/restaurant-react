@@ -7,12 +7,12 @@ import { motion } from 'framer-motion';
 const navMobileVariants = {
   hidden: {
     opacity: 0,
-    clipPath: 'circle(30px at 40px 40px)',
+    clipPath: 'circle(9.8% at 51% 0)',
   },
   show: {
     opacity: 1,
-    clipPath: 'circle(1000px at 40px 40px)',
-    transition: { duration: 0.4 },
+    clipPath: 'circle(89.4% at 51% 0)',
+    transition: { type: 'spring', damping: 20, stifness: 60 },
   },
 };
 
@@ -33,7 +33,7 @@ const Header = () => {
             variants={navMobileVariants}
             initial='hidden'
             animate={navMobile ? 'show' : ''}
-            className='bg-accent w-[300px] absolute h-screen left-0 top-0 bottom-0'
+            className='bg-accent w-[300px] absolute h-[80vh] xl:left-[12%] top-[80%] bottom-0 -z-10 rounded-lg'
           >
             <NavMobile />
           </motion.div>

@@ -2,8 +2,8 @@
 export const fadeIn = (direction) => {
   return {
     hidden: {
-      x: direction === 'left' ? 60 : direction === 'right' ? -60 : 0,
-      y: direction === 'up' ? 60 : direction === 'down' ? -60 : 0,
+      x: direction === 'left' ? 90 : direction === 'right' ? -90 : 0,
+      y: direction === 'up' ? 90 : direction === 'down' ? -90 : 0,
       opacity: 0,
     },
     show: {
@@ -11,23 +11,13 @@ export const fadeIn = (direction) => {
       y: 0,
       opacity: 1,
       transition: {
-        type: 'tween',
-        duration: 1.4,
-        ease: [0.25, 0.25, 0.25, 0.75],
+        type: 'spring',
+        duration: 3,
+        damping: 5,
+        stiffness: 100,
+        // ease: [0.15, 0.15, 0.15, 0.75],
+        // ease: [0, 0.55, 0.45, 1],
       },
     },
   };
-};
-
-export const opacity = {
-  hidden: {
-    opacity: 0,
-    // rotate: 126,
-  },
-  show: {
-    opacity: 1,
-    transition: {
-      type: 'spring',
-    },
-  },
 };

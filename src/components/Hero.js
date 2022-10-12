@@ -4,15 +4,15 @@ import { heroData } from '../data.js';
 // import motion
 import { motion } from 'framer-motion';
 // import fade in
-import { fadeIn, opacity } from '../variants';
+import { fadeIn } from '../variants';
 import Header from './Header.js';
 
 const staggerContainer = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.5,
-      delayChildren: 0.3,
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
     },
   },
 };
@@ -34,23 +34,23 @@ const Hero = () => {
         >
           {/* pretitle */}
           <motion.div
-            variants={opacity}
+            variants={fadeIn('down')}
             className='text-white text-[24px] lg:text-[28px] font-primary italic lg:font-medium mb-1'
           >
             {pretitle}
           </motion.div>
           {/* title */}
-          <motion.h1 variants={opacity} className='h1 mb-5'>
+          <motion.h1 variants={fadeIn('down')} className='h1 mb-5'>
             {title}
           </motion.h1>
           {/* subtitle */}
           <motion.p
-            variants={opacity}
+            variants={fadeIn('down')}
             className='text-white max-w-[540px] mb-8'
           >
             {subtitle}
           </motion.p>
-          <motion.div variants={opacity}>
+          <motion.div variants={fadeIn('down')}>
             <button className='btn'>{btnText}</button>
           </motion.div>
         </motion.div>
