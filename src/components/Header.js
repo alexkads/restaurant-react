@@ -49,7 +49,7 @@ const Header = () => {
   return (
     <header className='fixed w-full max-w-[1800px]'>
       <div className='container mx-auto'>
-        <div className='text-white flex justify-between items-center py-[70px] px-4 lg:px-0'>
+        <div className='text-white flex justify-between items-center py-[70px] px-4 lg:px-0 relative'>
           {/* menu btn */}
           <div
             className={`${
@@ -83,7 +83,7 @@ const Header = () => {
             variants={navMobileVariants}
             initial='hidden'
             animate={navMobile ? 'show' : ''}
-            className='bg-accent w-[310px] absolute h-screen left-0 top-0 bottom-0 z-10'
+            className='bg-accent w-[310px] absolute h-[50vh] right-0 lg:left-0 top-[20vh] bottom-0 z-50'
           >
             <NavMobile />
           </motion.div>
