@@ -65,7 +65,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className='fixed w-full max-w-[1800px]'
+      className='fixed w-full max-w-[1800px] z-10'
       variants={headerVariants}
       initial='hidden'
       animate={isActive ? 'show' : ''}
@@ -75,7 +75,7 @@ const Header = () => {
           {/* menu btn */}
           <div
             className={`${
-              navMobile ? 'bg-accent gap-y-0' : 'bg-transparent gap-y-2'
+              navMobile ? 'gap-y-0' : 'gap-y-2'
             } flex flex-col items-center justify-center w-12 h-12 order-2 lg:order-none cursor-pointer`}
             onClick={() => setNavMobile(!navMobile)}
           >
