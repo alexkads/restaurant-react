@@ -18,7 +18,7 @@
     @apply text-6xl lg:text-8xl font-bold text-white;
   }
   .h2 {
-    @apply font-black text-[46px];
+    @apply font-black text-[46px] mb-8;
   }
   .h3 {
     @apply font-extrabold italic text-[40px];
@@ -30,7 +30,7 @@
     @apply font-medium text-[22px] text-white;
   }
   .pretitle {
-    @apply font-primary font-bold text-base uppercase tracking-[-0.04em] text-accent mb-4;
+    @apply font-secondary font-bold text-base uppercase tracking-[-0.04em] text-accent mb-4;
   }
   .btn {
     @apply h-14 rounded-full bg-accent px-[42px] text-white text-base font-secondary font-semibold tracking-[0.02em] outline-none hover:bg-accent-hover transition-all duration-300 flex justify-center items-center;

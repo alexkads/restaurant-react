@@ -7,6 +7,7 @@ import LogoWhite from '../assets/img/header/logo-white.png';
 // import motion
 import { motion } from 'framer-motion';
 
+// variants
 const navMobileVariants = {
   hidden: {
     clipPath: 'circle(6.2% at 1% 1%)',
@@ -36,7 +37,6 @@ const headerVariants = {
   show: {
     padding: '14px 0 14px 0',
     background: '#0B0D0F',
-    dropShadow: 'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))',
     transition: {
       // type: 'tween',
       // duration: 0.3,
@@ -58,7 +58,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className='fixed w-full max-w-[1800px] z-10'
+      className='fixed w-full max-w-[1800px] z-10 py-4'
       variants={headerVariants}
       initial='hidden'
       animate={isActive ? 'show' : ''}
@@ -109,7 +109,7 @@ const Header = () => {
             variants={navMobileVariants}
             initial='hidden'
             animate={navMobile ? 'show' : ''}
-            className='bg-accent w-[310px] absolute h-[50vh] right-0 lg:left-0 top-[120px] bottom-0 z-50 rounded-lg'
+            className='absolute w-[310px] h-[50vh] bg-accent right-0 lg:left-0 top-[120px] bottom-0 z-50 rounded-lg shadow-xl'
           >
             <NavMobile />
           </motion.div>
