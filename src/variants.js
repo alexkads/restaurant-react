@@ -1,4 +1,4 @@
-export const fadeIn = (direction) => {
+export const fadeIn = (direction, duration) => {
   return {
     hidden: {
       x: direction === 'left' ? 80 : direction === 'right' ? -80 : 0,
@@ -10,30 +10,22 @@ export const fadeIn = (direction) => {
       y: 0,
       opacity: 1,
       transition: {
-        type: 'spring',
-        duration: 1,
+        type: 'tween',
+        duration: duration,
         // ease: [0.25, 0.25, 0.25, 0.75],
       },
     },
   };
 };
 
-export const headerStaggerContainer = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.3,
-      delayChildren: 1,
+export const staggerContainer = (staggerChildren, delayChildren) => {
+  return {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: staggerChildren,
+        delayChildren: delayChildren,
+      },
     },
-  },
-};
-
-export const heroStaggerContainer = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.4,
-      delayChildren: 2,
-    },
-  },
+  };
 };

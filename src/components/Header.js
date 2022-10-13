@@ -7,7 +7,7 @@ import LogoWhite from '../assets/img/header/logo-white.png';
 // import motion
 import { motion } from 'framer-motion';
 // import variants
-import { headerStaggerContainer, fadeIn } from '../variants';
+import { staggerContainer, fadeIn } from '../variants';
 
 const headerVariants = {
   hidden: {
@@ -29,9 +29,9 @@ export const navMobileVariants = {
     clipPath: 'circle(6.2% at 1% 1%)',
     opacity: 0,
     transition: {
-      delay: 0.5,
       type: 'spring',
-      stiffness: 400,
+      delay: 0.2,
+      stiffness: 300,
       damping: 40,
     },
   },
@@ -40,7 +40,7 @@ export const navMobileVariants = {
     clipPath: `circle(139.5% at 1% 2%)`,
     transition: {
       type: 'spring',
-      stiffness: 40,
+      stiffness: 80,
     },
   },
 };
@@ -66,7 +66,7 @@ const Header = () => {
     >
       {/* container */}
       <motion.div
-        variants={headerStaggerContainer}
+        variants={staggerContainer(0.3, 1)}
         initial='hidden'
         animate={'show'}
         className='container mx-auto'
