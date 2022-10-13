@@ -23,7 +23,7 @@ const About = () => {
   // destructure about data
   const { pretitle, title, subtitle, btnText, image } = aboutData;
   return (
-    <section className=' bg-pink-100 min-h-[680px]'>
+    <section className='min-h-[680px]'>
       <div className='container mx-auto min-h-[680px]'>
         <div className='flex flex-col lg:flex-row items-center min-h-[680px]'>
           {/* text */}

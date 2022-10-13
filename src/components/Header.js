@@ -6,9 +6,25 @@ import Socials from './Socials';
 import LogoWhite from '../assets/img/header/logo-white.png';
 // import motion
 import { motion } from 'framer-motion';
+// import variants
+import { headerStaggerContainer, fadeIn } from '../variants';
 
-// variants
-const navMobileVariants = {
+const headerVariants = {
+  hidden: {
+    padding: '84px 0 84px 0',
+    background: `none`,
+  },
+  show: {
+    padding: '14px 0 14px 0',
+    background: '#0a0909',
+    transition: {
+      type: 'spring',
+      // duration: 0.2,
+    },
+  },
+};
+
+export const navMobileVariants = {
   hidden: {
     clipPath: 'circle(6.2% at 1% 1%)',
     opacity: 0,
@@ -25,21 +41,6 @@ const navMobileVariants = {
     transition: {
       type: 'spring',
       stiffness: 40,
-    },
-  },
-};
-
-const headerVariants = {
-  hidden: {
-    padding: '84px 0 84px 0',
-    background: `none`,
-  },
-  show: {
-    padding: '14px 0 14px 0',
-    background: '#0B0D0F',
-    transition: {
-      // type: 'tween',
-      // duration: 0.3,
     },
   },
 };
@@ -63,10 +64,17 @@ const Header = () => {
       initial='hidden'
       animate={isActive ? 'show' : ''}
     >
-      <div className='container mx-auto'>
+      {/* container */}
+      <motion.div
+        variants={headerStaggerContainer}
+        initial='hidden'
+        animate={'show'}
+        className='container mx-auto'
+      >
         <div className='text-white flex justify-between items-center px-4 lg:px-0 relative'>
           {/* menu btn */}
-          <div
+          <motion.div
+            variants={fadeIn('down')}
             className={`${
               navMobile ? 'gap-y-0' : 'gap-y-2'
             } flex flex-col items-center justify-center w-12 h-12 p-3 order-2 lg:order-none cursor-pointer border-2 rounded-full`}
@@ -89,9 +97,12 @@ const Header = () => {
               }}
               className='w-full h-[2px] bg-white'
             ></motion.div>
-          </div>
+          </motion.div>
           {/* logo */}
-          <div className='order-1 lg:order-none lg:ml-[11rem]'>
+          <motion.div
+            variants={fadeIn('down')}
+            className='order-1 lg:order-none lg:ml-[11rem]'
+          >
             <a href='#'>
               <img
                 src={LogoWhite}
@@ -99,11 +110,11 @@ const Header = () => {
                 alt=''
               />
             </a>
-          </div>
+          </motion.div>
           {/* social icons */}
-          <div className='hidden lg:flex'>
+          <motion.div variants={fadeIn('down')} className='hidden lg:flex'>
             <Socials />
-          </div>
+          </motion.div>
           {/* nav mobile */}
           <motion.div
             variants={navMobileVariants}
@@ -114,7 +125,7 @@ const Header = () => {
             <NavMobile />
           </motion.div>
         </div>
-      </div>
+      </motion.div>
     </motion.header>
   );
 };

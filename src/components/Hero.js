@@ -3,19 +3,10 @@ import React from 'react';
 import { heroData } from '../data.js';
 // import motion
 import { motion } from 'framer-motion';
-// import fade in
-import { fadeIn } from '../variants';
+// import variants
+import { heroStaggerContainer, fadeIn } from '../variants';
+// import components
 import Header from './Header.js';
-
-const staggerContainer = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
 
 const Hero = () => {
   // destructure hero data
@@ -26,10 +17,9 @@ const Hero = () => {
       <div className='container mx-auto min-h-[980px] flex justify-center items-center'>
         {/* text */}
         <motion.div
-          variants={staggerContainer}
+          variants={heroStaggerContainer}
           initial='hidden'
-          whileInView={'show'}
-          viewport={{ once: false, amount: 0.1 }}
+          animate={'show'}
           className='text-center flex flex-col items-center'
         >
           {/* pretitle */}
