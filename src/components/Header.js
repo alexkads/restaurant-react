@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
 // import components
 import NavMobile from './NavMobile';
-// import logo
+// import images
 import LogoWhite from '../assets/img/header/logo-white.png';
-import LogoDark from '../assets/img/header/logo-dark.png';
 // import motion
 import { motion } from 'framer-motion';
 
@@ -37,19 +35,43 @@ const menuBarRotateLeft = {
   },
 };
 
-const menuBarRotateRight = {
-  hidden: { rotate: 0 },
+const headerVariants = {
+  hidden: {
+    padding: '70px 0 70px 0',
+    background: `none`,
+  },
   show: {
-    rotate: 45,
+    padding: '14px 0 14px 0',
+    background: '#0B0D0F',
+    dropShadow: 'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))',
+    transition: {
+      // type: 'tween',
+      // duration: 0.3,
+    },
   },
 };
 
 const Header = () => {
+  // nav mobile state
   const [navMobile, setNavMobile] = useState(false);
+  // header state
+  const [isActive, setIsActive] = useState(false);
+  // event listener
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      window.scrollY > 50 ? setIsActive(true) : setIsActive(false);
+    });
+  });
+
   return (
-    <header className='fixed w-full max-w-[1800px]'>
+    <motion.header
+      className='fixed w-full max-w-[1800px]'
+      variants={headerVariants}
+      initial='hidden'
+      animate={isActive ? 'show' : ''}
+    >
       <div className='container mx-auto'>
-        <div className='text-white flex justify-between items-center py-[70px] px-4 lg:px-0 relative'>
+        <div className='text-white flex justify-between items-center px-4 lg:px-0 relative'>
           {/* menu btn */}
           <div
             className={`${
@@ -58,22 +80,29 @@ const Header = () => {
             onClick={() => setNavMobile(!navMobile)}
           >
             <motion.div
-              variants={menuBarRotateLeft}
-              initial='hidden'
-              animate={navMobile ? 'show' : ''}
+              initial={{ rotate: 0 }}
+              animate={{
+                rotate: navMobile ? -45 : 0,
+                translateY: navMobile ? 2 : 0,
+              }}
               className='w-10 h-[2px] bg-white'
             ></motion.div>
             <motion.div
-              variants={menuBarRotateRight}
-              initial='hidden'
-              animate={navMobile ? 'show' : ''}
+              initial={{ rotate: 0 }}
+              animate={{
+                rotate: navMobile ? 45 : 0,
+              }}
               className='w-10 h-[2px] bg-white'
             ></motion.div>
           </div>
           {/* logo */}
           <div className='order-1 lg:order-none'>
             <a href='#'>
-              <img src={LogoWhite} alt='' />
+              <img
+                src={LogoWhite}
+                className={`${isActive ? 'w-[90px] h-[90px]' : ''}`}
+                alt=''
+              />
             </a>
           </div>
           {/* social icons */}
@@ -83,13 +112,13 @@ const Header = () => {
             variants={navMobileVariants}
             initial='hidden'
             animate={navMobile ? 'show' : ''}
-            className='bg-accent w-[310px] absolute h-[50vh] right-0 lg:left-0 top-[20vh] bottom-0 z-50 rounded-lg'
+            className='bg-accent w-[310px] absolute h-[50vh] right-0 lg:left-0 top-[120px] bottom-0 z-50 rounded-lg'
           >
             <NavMobile />
           </motion.div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 
