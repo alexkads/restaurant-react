@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // import components
 import NavMobile from './NavMobile';
+import Socials from './Socials';
 // import images
 import LogoWhite from '../assets/img/header/logo-white.png';
 // import motion
@@ -27,17 +28,9 @@ const navMobileVariants = {
   },
 };
 
-const menuBarRotateLeft = {
-  hidden: { rotate: 0 },
-  show: {
-    rotate: -45,
-    translateY: 2,
-  },
-};
-
 const headerVariants = {
   hidden: {
-    padding: '70px 0 70px 0',
+    padding: '84px 0 84px 0',
     background: `none`,
   },
   show: {
@@ -76,27 +69,29 @@ const Header = () => {
           <div
             className={`${
               navMobile ? 'gap-y-0' : 'gap-y-2'
-            } flex flex-col items-center justify-center w-12 h-12 order-2 lg:order-none cursor-pointer`}
+            } flex flex-col items-center justify-center w-12 h-12 p-3 order-2 lg:order-none cursor-pointer border-2 rounded-full`}
             onClick={() => setNavMobile(!navMobile)}
           >
+            {/* bar */}
             <motion.div
               initial={{ rotate: 0 }}
               animate={{
                 rotate: navMobile ? -45 : 0,
                 translateY: navMobile ? 2 : 0,
               }}
-              className='w-10 h-[2px] bg-white'
+              className='w-full h-[2px] bg-white'
             ></motion.div>
+            {/* bar */}
             <motion.div
               initial={{ rotate: 0 }}
               animate={{
                 rotate: navMobile ? 45 : 0,
               }}
-              className='w-10 h-[2px] bg-white'
+              className='w-full h-[2px] bg-white'
             ></motion.div>
           </div>
           {/* logo */}
-          <div className='order-1 lg:order-none'>
+          <div className='order-1 lg:order-none lg:ml-[11rem]'>
             <a href='#'>
               <img
                 src={LogoWhite}
@@ -106,7 +101,9 @@ const Header = () => {
             </a>
           </div>
           {/* social icons */}
-          <div className='hidden lg:flex'>social icons</div>
+          <div className='hidden lg:flex'>
+            <Socials />
+          </div>
           {/* nav mobile */}
           <motion.div
             variants={navMobileVariants}
