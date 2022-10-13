@@ -23,7 +23,7 @@ module.exports = {
         body: '#e5e5e5',
         dark: '#0a0909',
         grey: {
-          DEFAULT: '#3686867',
+          DEFAULT: '#777876',
           100: '#e4e4e3',
         },
         accent: {

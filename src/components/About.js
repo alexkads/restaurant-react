@@ -8,7 +8,7 @@ import { fadeIn, staggerContainer } from '../variants';
 
 const plateVariants = {
   hidden: {
-    x: '110%',
+    x: '120%',
     rotate: 180,
   },
   show: {
