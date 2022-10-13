@@ -8,15 +8,15 @@ import { fadeIn, staggerContainer } from '../variants';
 
 const plateVariants = {
   hidden: {
-    x: 100 + '%',
-    rotate: 120,
+    x: '110%',
+    rotate: 180,
   },
   show: {
     x: 0,
     rotate: 0,
     transition: {
-      type: 'tween',
-      duration: 1,
+      type: 'spring', // or tween
+      duration: 2,
     },
   },
 };
@@ -27,13 +27,16 @@ const About = () => {
   return (
     <section className='min-h-[680px]'>
       <div className='container mx-auto min-h-[680px]'>
-        <div className='flex flex-col lg:flex-row items-center min-h-[680px]'>
+        <motion.div
+          variants={staggerContainer(0.3, 0.3)}
+          initial='hidden'
+          whileInView={'show'}
+          viewport={{ once: false, amount: 0.4 }}
+          className='flex flex-col lg:flex-row items-center min-h-[680px]'
+        >
           {/* text */}
           <motion.div
-            variants={fadeIn('right', 0.8)}
-            initial='hidden'
-            whileInView={'show'}
-            viewport={{ once: false, amount: 0.5 }}
+            variants={fadeIn('right', 1)}
             className='flex-1 text-center lg:text-left'
           >
             <div className='pretitle'>{pretitle}</div>
@@ -47,14 +50,11 @@ const About = () => {
           {/* image */}
           <motion.div
             variants={plateVariants}
-            initial='hidden'
-            whileInView={'show'}
-            viewport={{ once: false, amount: 0.1 }}
             className='flex-1 -mb-[300px] -mr-[176px]'
           >
             <img src={image} alt='' />
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
