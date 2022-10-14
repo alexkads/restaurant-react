@@ -10,6 +10,10 @@ import {
 import AboutImg from '../src/assets/img/about/plate.png';
 import ModelWhiteImg from '../src/assets/img/model-white.png';
 import ModelBlackImg from '../src/assets/img/model-black.png';
+import MenuImg1 from '../src/assets/img/menu/1.png';
+import MenuImg2 from '../src/assets/img/menu/2.png';
+import MenuImg3 from '../src/assets/img/menu/3.png';
+import MenuImg4 from '../src/assets/img/menu/4.png';
 
 export const heroData = {
   pretitle: 'Nothing brings together like',
@@ -37,7 +41,33 @@ export const aboutData = {
 };
 
 export const menuData = {
-  title: 'delicious flavor of outumn',
+  title: 'delicious flavour of autumn',
   subtitle: 'view all menu for tasty meal today',
   modelImg: ModelWhiteImg,
+  menuItems: [
+    {
+      image: MenuImg1,
+      name: 'Chocolate Cake',
+      price: '$7.99',
+      description: 'Class aptent taciti ciosqu litora torquent per',
+    },
+    {
+      image: MenuImg2,
+      name: 'Vegan Burger',
+      price: '$9.49',
+      description: 'Class aptent taciti ciosqu litora torquent per',
+    },
+    {
+      image: MenuImg3,
+      name: 'King Burger',
+      price: '$8.50',
+      description: 'Class aptent taciti ciosqu litora torquent per',
+    },
+    {
+      image: MenuImg4,
+      name: 'Mexican Burger',
+      price: '$9.99',
+      description: 'Class aptent taciti ciosqu litora torquent per',
+    },
+  ],
 };

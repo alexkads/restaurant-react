@@ -16,7 +16,7 @@ const headerVariants = {
   },
   show: {
     padding: '14px 0 14px 0',
-    background: '#0a0909',
+    background: 'rgba(0, 0, 0, 0.85)',
     transition: {
       type: 'spring',
       // duration: 0.2,
@@ -59,7 +59,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className='fixed w-full max-w-[1800px] z-10 py-4'
+      className='fixed w-full max-w-[1800px] z-50 py-4'
       variants={headerVariants}
       initial='hidden'
       animate={isActive ? 'show' : ''}

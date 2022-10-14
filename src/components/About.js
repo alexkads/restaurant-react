@@ -6,9 +6,9 @@ const About = () => {
   // destructure about data
   const { pretitle, title, subtitle, btnText, image } = aboutData;
   return (
-    <section className='min-h-[680px]'>
-      <div className='container mx-auto min-h-[680px]'>
-        <div className='flex flex-col lg:flex-row items-center min-h-[680px]'>
+    <section className='min-h-[620px]'>
+      <div className='container mx-auto min-h-[620px]'>
+        <div className='flex flex-col lg:flex-row items-center min-h-[620px]'>
           {/* text */}
           <div className='flex-1 text-center lg:text-left'>
             <div className='pretitle'>{pretitle}</div>
@@ -20,7 +20,7 @@ const About = () => {
             </button>
           </div>
           {/* image */}
-          <div className='flex-1 -mb-[300px] -mr-[176px]'>
+          <div className='flex-1 -mb-[300px] -mr-[176px] z-10'>
             <img src={image} alt='' />
           </div>
         </div>
