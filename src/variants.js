@@ -29,3 +29,18 @@ export const staggerContainer = (staggerChildren, delayChildren) => {
     },
   };
 };
+
+// const plateVariants = {
+//   hidden: {
+//     x: '120%',
+//     rotate: 180,
+//   },
+//   show: {
+//     x: 0,
+//     rotate: 0,
+//     transition: {
+//       type: 'spring', // or tween
+//       duration: 2,
+//     },
+//   },
+// };
