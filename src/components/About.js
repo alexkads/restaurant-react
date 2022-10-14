@@ -20,7 +20,7 @@ const About = () => {
             </button>
           </div>
           {/* image */}
-          <div className='flex-1 -mb-[300px] -mr-[176px] z-10'>
+          <div className=' -mb-[300px] -mr-[186px] z-10'>
             <img src={image} alt='' />
           </div>
         </div>

@@ -6,7 +6,7 @@ const Menu = () => {
   // destructure menu data
   const { title, subtitle, modelImg, menuItems } = menuData;
   return (
-    <section className='bg-menu min-h-[720px] bg-center bg-cover bg-no-repeat pt-[300px] lg:pt-[145px]'>
+    <section className='bg-menu min-h-[720px] bg-center bg-cover bg-no-repeat pt-[300px] lg:pt-[180px]'>
       <div className='container mx-auto'>
         {/* text */}
         <div className='text-center capitalize flex flex-col items-center max-w-[400px] mx-auto'>
@@ -21,7 +21,7 @@ const Menu = () => {
         </div>
         <div className=' relative flex justify-center max-w-[295px] mx-auto md:max-w-none'>
           {/* menu items */}
-          <div className='absolute grid grid-cols-1 md:grid-cols-4'>
+          <div className='absolute grid grid-cols-1 md:grid-cols-4 gap-y-12'>
             {menuItems.map((item, index) => {
               // destructure item
               const { image, name, price, description } = item;
@@ -38,10 +38,14 @@ const Menu = () => {
                       <img src={image} alt='' />
                     </div>
                     {/* text */}
-                    <div className='order-1 bg-[#fff3e4] p-4 xl:h-[295px]'>
-                      <div>{item.name}</div>
-                      <div>{item.price}</div>
-                      <div>{item.description}</div>
+                    <div className='order-1 bg-[#fff3e4] p-12 md:p-4 lg:h-[251px] xl:h-[295px] flex flex-col items-center justify-center'>
+                      <div className='text-[26px] md:text-[20px]  xl:text-[26px] text-dark font-semibold'>
+                        {name}
+                      </div>
+                      <div className='text-[40px] md:text-[24px] lg:text-[40px]  font-bold text-accent my-6 md:my-2 lg:my-6'>
+                        {price}
+                      </div>
+                      <div className=''>{description}</div>
                     </div>
                   </div>
                 </div>
