@@ -19,33 +19,38 @@ const Menu = () => {
             <img src={modelImg} alt='' />
           </div>
         </div>
+        {/* menu items wrapper */}
         <div className=' relative flex justify-center max-w-[295px] mx-auto md:max-w-none'>
-          {/* menu items */}
+          {/* menu items grid */}
           <div className='absolute grid grid-cols-1 md:grid-cols-4 gap-y-12'>
             {menuItems.map((item, index) => {
               // destructure item
               const { image, name, price, description } = item;
               return (
+                // item
                 <div className='text-center' key={index}>
                   <div className='flex flex-col'>
                     {/* image */}
                     <div
                       className={`${
-                        // if index is equal to 0 (first item) or 2 (3rd item) add class
+                        // inverse order for 1st and 3rd item
                         index === 0 || index === 2 ? 'order-2' : 'order-none'
                       }`}
                     >
                       <img src={image} alt='' />
                     </div>
                     {/* text */}
-                    <div className='order-1 bg-[#fff3e4] p-12 md:p-4 lg:h-[251px] xl:h-[295px] flex flex-col items-center justify-center'>
-                      <div className='text-[26px] md:text-[20px]  xl:text-[26px] text-dark font-semibold'>
+                    <div className='order-1 bg-[#fff3e4] p-12 md:p-4 lg:p-6 xl:p-12  lg:h-[251px] xl:h-[295px] flex flex-col items-center justify-center'>
+                      {/* name */}
+                      <div className='text-[26px] md:text-[20px] xl:text-[24px] text-dark font-semibold'>
                         {name}
                       </div>
-                      <div className='text-[40px] md:text-[24px] lg:text-[40px]  font-bold text-accent my-6 md:my-2 lg:my-6'>
+                      {/* price */}
+                      <div className='text-[40px] md:text-[24px] lg:text-[40px] font-bold text-accent my-6 md:my-2 lg:my-6'>
                         {price}
                       </div>
-                      <div className=''>{description}</div>
+                      {/* description */}
+                      <div>{description}</div>
                     </div>
                   </div>
                 </div>

@@ -53,7 +53,7 @@ export const menuData = {
     },
     {
       image: MenuImg2,
-      name: 'Vegan Burger',
+      name: 'Veggie Burger',
       price: '$9.49',
       description: 'Class aptent taciti ciosqu litora torquent per',
     },
