@@ -14,6 +14,8 @@ import MenuImg1 from '../src/assets/img/menu/1.png';
 import MenuImg2 from '../src/assets/img/menu/2.png';
 import MenuImg3 from '../src/assets/img/menu/3.png';
 import MenuImg4 from '../src/assets/img/menu/4.png';
+import SignatureImg from '../src/assets/img/team/signature.svg';
+import ChefImg from '../src/assets/img/team/chef.png';
 
 export const heroData = {
   pretitle: 'Nothing brings together like',
@@ -71,4 +73,15 @@ export const menuData = {
       description: 'Class aptent taciti ciosqu litora torquent per',
     },
   ],
+};
+
+export const teamData = {
+  pretitle: 'our team',
+  title: 'meet our chef',
+  sub1: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis adipisci repudiandae enim ratione corrupti voluptatum suscipit distinctio dolor.',
+  sub2: 'Sequi exercitationem quae deserunt reiciendis nesciunt perferendis atque quisquam, odit facere! Minima esse reiciendis, magnam fugiat totam maxime consequatur perspiciatis voluptas consequuntur.',
+  name: 'sara peter',
+  occupation: 'executive chef',
+  signatureImg: SignatureImg,
+  chefImg: ChefImg,
 };
