@@ -24,7 +24,7 @@ const Menu = () => {
       {/* image gallery */}
       <div className='relative top-80 lg:top-96'>
         <div className='container mx-auto'>
-          <div className='bg-green-400 lg:-mt-24 min-h-[590px] z-30 mb-8 lg:mb-16'>
+          <div className='lg:-mt-24 min-h-[590px] z-30 mb-8 md:mb-4 xl:mb-16'>
             <div className='grid grid-cols-1 lg:grid-cols-4 min-h-[590px]'>
               {menuItems.map((item, index) => {
                 // destructure item
@@ -33,14 +33,24 @@ const Menu = () => {
                   <div key={index}>
                     <div className='flex flex-row lg:flex-col h-full'>
                       {/* image */}
-                      <div className='w-[45%] md:w-auto'>
+                      <div
+                        className={`w-[45%] md:w-auto ${
+                          index === 1 || index === 3
+                            ? 'lg:order-1'
+                            : 'order-none'
+                        }`}
+                      >
                         <img src={image} alt='' />
                       </div>
                       {/* text */}
-                      <div className='bg-amber-300 flex-1 flex flex-col justify-center px-6 lg:p-12'>
-                        <div className='bg-pink-200'>
-                          <div>{name}</div>
-                          <div>{price}</div>
+                      <div className='bg-[#fff3e4] flex-1 flex flex-col justify-center px-6 lg:p-12 lg:max-h-[250px] xl:max-h-max'>
+                        <div className='text-center'>
+                          <div className='text-xl font-semibold text-dark xl:text-2xl'>
+                            {name}
+                          </div>
+                          <div className='my-1 text-[20px] lg:text-[40px] lg:my-6  text-accent font-semibold'>
+                            {price}
+                          </div>
                           <div>{description}</div>
                         </div>
                       </div>
@@ -94,7 +104,7 @@ export default Menu;
 //                     <img src={image} alt='' />
 //                   </div>
 //                   {/* text */}
-//                   <div className='order-1 bg-[#fff3e4] p-12 md:p-4 lg:p-6 xl:p-12  lg:h-[251px] xl:h-[295px] flex flex-col items-center justify-center'>
+//                   <div className='order-1 bg-[#fff3e4] p-12 md:p-4 lg:p-6 xl:p-12 lg:h-[251px] xl:h-[295px] flex flex-col items-center justify-center'>
 //                     {/* name */}
 //                     <div className='text-[26px] md:text-[20px] xl:text-[24px] text-dark font-semibold'>
 //                       {name}
