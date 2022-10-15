@@ -44,6 +44,7 @@ export const menuData = {
   title: 'delicious flavour of autumn',
   subtitle: 'view all menu for tasty meal today',
   modelImg: ModelWhiteImg,
+  btnText: 'view complete menu',
   menuItems: [
     {
       image: MenuImg1,

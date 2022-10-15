@@ -4,7 +4,7 @@ import { menuData } from '../data';
 
 const Menu = () => {
   // destructure menu data
-  const { title, subtitle, modelImg, menuItems } = menuData;
+  const { title, subtitle, modelImg, menuItems, btnText } = menuData;
   return (
     <section className='bg-menu min-h-[720px] bg-center bg-cover bg-no-repeat pt-[300px] lg:pt-[180px]'>
       <div className='container mx-auto'>
@@ -56,6 +56,10 @@ const Menu = () => {
                 </div>
               );
             })}
+          </div>
+          <div className='absolute -bottom-[2450px] md:-bottom-[480px]  lg:-bottom-[600px] xl:-bottom-[700px]'>
+            {/* button */}
+            <button className='btn capitalize'>{btnText}</button>
           </div>
         </div>
       </div>
