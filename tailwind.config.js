@@ -35,6 +35,7 @@ module.exports = {
         pattern: "url('assets/img/body-bg-pattern.png')",
         hero: "url('assets/img/hero/bg.png')",
         menu: "url('assets/img/menu/bg.png')",
+        testimonial: "url('assets/img/testimonial/bg.png')",
       },
     },
   },

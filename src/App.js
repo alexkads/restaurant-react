@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Menu from './components/Menu';
 import Team from './components/Team';
+import Testimonial from './components/Testimonial';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <About />
       <Menu />
       <Team />
+      <Testimonial />
       <div className='h-[4000px]'></div>
     </div>
   );

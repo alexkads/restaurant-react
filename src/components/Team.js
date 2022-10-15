@@ -14,7 +14,7 @@ const Team = () => {
     chefImg,
   } = teamData;
   return (
-    <section className='relative z-10 top-96 lg:top-[480px]'>
+    <section className='relative z-10 top-96 lg:top-[480px]  min-h-[720px]'>
       <div className='container mx-auto'>
         {/* text & image wrapper */}
         <div className='flex flex-col lg:flex-row gap-x-[120px] items-center'>
