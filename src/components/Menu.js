@@ -25,24 +25,24 @@ const Menu = () => {
       <div className='relative top-80 lg:top-96'>
         <div className='container mx-auto'>
           <div className='bg-green-400 lg:-mt-24 min-h-[590px] z-30 mb-8 lg:mb-16'>
-            <div className='grid grid-cols-1 lg:grid-cols-4'>
+            <div className='grid grid-cols-1 lg:grid-cols-4 min-h-[590px]'>
               {menuItems.map((item, index) => {
                 // destructure item
                 const { image, name, price, description } = item;
                 return (
                   <div key={index}>
-                    <div className='flex flex-col'>
+                    <div className='flex flex-row lg:flex-col h-full'>
                       {/* image */}
-                      <div>
-                        <img
-                          className='w-[195px] h-[195px] lg:w-[295px] lg:h-[295px]'
-                          src={image}
-                          alt=''
-                        />
+                      <div className='w-[45%] md:w-auto'>
+                        <img src={image} alt='' />
                       </div>
                       {/* text */}
-                      <div>
-                        <div>{name}</div>
+                      <div className='bg-amber-300 flex-1 flex flex-col justify-center px-6 lg:p-12'>
+                        <div className='bg-pink-200'>
+                          <div>{name}</div>
+                          <div>{price}</div>
+                          <div>{description}</div>
+                        </div>
                       </div>
                     </div>
                   </div>
