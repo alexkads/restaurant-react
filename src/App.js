@@ -3,6 +3,7 @@ import React from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
 import Menu from './components/Menu';
+import Team from './components/Team';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Hero />
       <About />
       <Menu />
+      <Team />
       <div className='h-[4000px]'></div>
     </div>
   );
