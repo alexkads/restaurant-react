@@ -9,7 +9,9 @@ const TestimonialCarousel = ({ slider }) => {
       showThumbs={false}
       showStatus={false}
       showIndicators={false}
-      className='h-[500px] w-full max-w-[1024px] flex items-center justify-center'
+      autoPlay={true}
+      infiniteLoop={true}
+      className='w-full max-w-[1024px] flex items-center justify-center'
     >
       {slider.map((item, index) => {
         return (

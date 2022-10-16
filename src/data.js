@@ -90,8 +90,8 @@ export const teamData = {
 };
 
 export const testimonialData = {
-  title: '',
-  subtitle: '',
+  title: "what client's say ",
+  subtitle: '1500+ statisfied clients',
   modelImg: ModelWhiteImg,
   slider: [
     {
