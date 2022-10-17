@@ -14,12 +14,12 @@ const Team = () => {
     chefImg,
   } = teamData;
   return (
-    <section className='relative z-10 top-96 lg:top-[480px]  min-h-[720px]'>
+    <section className='relative z-10 top-96 lg:top-[480px] min-h-[720px]'>
       <div className='container mx-auto'>
         {/* text & image wrapper */}
         <div className='flex flex-col lg:flex-row gap-x-[120px]'>
           {/* text */}
-          <div className='flex-1 max-w-[540px] text-center lg:text-left pt-16'>
+          <div className='flex-1 max-w-[540px] text-center lg:text-left lg:pt-16'>
             <div className='pretitle'>{pretitle}</div>
             <h2 className='h2 capitalize'>{title}</h2>
             <p className='mb-[60px]'>{sub1}</p>
@@ -32,7 +32,7 @@ const Team = () => {
                 {occupation}
               </div>
             </div>
-            <div className='mx-auto max-w-xs lg:max-w-none'>
+            <div className='flex justify-center lg:justify-start mb-6 lg:mb-0'>
               <img src={signatureImg} alt='' />
             </div>
           </div>
