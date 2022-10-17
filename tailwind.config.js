@@ -28,7 +28,7 @@ module.exports = {
         },
         accent: {
           DEFAULT: '#fe7634',
-          hover: '#d86128',
+          hover: '#F55304',
         },
       },
       backgroundImage: {
