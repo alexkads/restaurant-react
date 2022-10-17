@@ -17,7 +17,7 @@ const Team = () => {
     <section className='relative z-10 top-96 lg:top-[480px] min-h-[720px]'>
       <div className='container mx-auto'>
         {/* text & image wrapper */}
-        <div className='flex flex-col lg:flex-row gap-x-[120px]'>
+        <div className='flex flex-col lg:flex-row gap-x-[120px] items-center lg:items-start'>
           {/* text */}
           <div className='flex-1 max-w-[540px] text-center lg:text-left lg:pt-16'>
             <div className='pretitle'>{pretitle}</div>
