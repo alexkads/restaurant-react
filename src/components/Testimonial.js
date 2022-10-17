@@ -8,13 +8,13 @@ const Testimonial = () => {
   // destructure testimonial data
   const { title, subtitle, modelImg, slider } = testimonialData;
   return (
-    <div className='bg-testimonial bg-cover bg-no-repeat relative top-[340px] lg:top-[390px] z-10 h-[800px] pt-36'>
-      <div className='container mx-auto h-full'>
+    <div className='bg-testimonial bg-cover bg-no-repeat relative top-[340px] lg:top-[390px] z-10 h-[800px] pt-[120px]'>
+      <div className='container mx-auto'>
         {/* text */}
         <div className='text-center capitalize flex flex-col items-center'>
           <h2 className='h2 text-white'>{title}</h2>
-          <p className='text-white/70'>{subtitle}</p>
-          <div>
+          <p className='text-white/70 capitalize mb-8'>{subtitle}</p>
+          <div className='mb-12'>
             <img src={modelImg} alt='' />
           </div>
         </div>
