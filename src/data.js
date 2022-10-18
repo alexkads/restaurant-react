@@ -152,11 +152,14 @@ export const footerData = {
       },
     ],
   },
-  social: [
-    { href: '/', icon: <FaYoutube /> },
-    { href: '/', icon: <FaFacebook /> },
-    { href: '/', icon: <FaInstagram /> },
-    { href: '/', icon: <FaPinterest /> },
-    { href: '/', icon: <FaDiscord /> },
-  ],
+  social: {
+    title: 'social network',
+    icons: [
+      { href: '/', icon: <FaYoutube /> },
+      { href: '/', icon: <FaFacebook /> },
+      { href: '/', icon: <FaInstagram /> },
+      { href: '/', icon: <FaPinterest /> },
+      { href: '/', icon: <FaDiscord /> },
+    ],
+  },
 };

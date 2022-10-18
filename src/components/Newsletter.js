@@ -6,8 +6,8 @@ const Newsletter = () => {
   const { title, subtitle, placeholder, btnText } = newsletterData;
   return (
     <div className='w-full max-w-[1182px]'>
-      <div className=' h-[210px] lg:bg-newsletter lg:bg-cover lg:bg-center'>
-        <div className='h-full flex flex-col lg:flex-row items-center max-w-[890px] mx-auto text-center lg:text-left'>
+      <div className='h-[210px] lg:bg-newsletter lg:bg-cover lg:bg-center'>
+        <div className='h-full flex flex-col lg:flex-row items-center max-w-[860px] xl:max-w-[960px]  mx-auto text-center lg:text-left'>
           {/* text */}
           <div className='flex-1'>
             <h3 className='text-[26px] font-primary font-extrabold italic capitalize text-white mb-2'>
