@@ -125,3 +125,38 @@ export const reservationData = {
   modelImg: ModelBlackImg,
   btnText: 'make a reservation',
 };
+
+export const newsletterData = {
+  title: 'join our newsletter',
+  subtitle: 'get latest news & updates in your inbox',
+  placeholder: 'Subscribe our delicious dishes',
+  btnText: 'subscribe now',
+};
+
+export const footerData = {
+  contact: {
+    title: 'contact location',
+    address: '3784 patterson road, #8 new york, CA 69000',
+    phone: '(201)256-3689',
+  },
+  hours: {
+    title: 'working hours',
+    program: [
+      {
+        days: 'monday - friday',
+        hours: '09:00AM - 10:00PM',
+      },
+      {
+        days: 'saturday - sunday',
+        hours: '09:00AM - 11:00PM',
+      },
+    ],
+  },
+  social: [
+    { href: '/', icon: <FaYoutube /> },
+    { href: '/', icon: <FaFacebook /> },
+    { href: '/', icon: <FaInstagram /> },
+    { href: '/', icon: <FaPinterest /> },
+    { href: '/', icon: <FaDiscord /> },
+  ],
+};

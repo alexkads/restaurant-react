@@ -6,6 +6,7 @@ import Menu from './components/Menu';
 import Team from './components/Team';
 import Testimonial from './components/Testimonial';
 import Reservation from './components/Reservation';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Team />
       <Testimonial />
       <Reservation />
+      <Footer />
       <div className='h-[4000px]'></div>
     </div>
   );
