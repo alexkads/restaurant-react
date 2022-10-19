@@ -1,9 +1,9 @@
 // import icons
 import {
   FaYoutube,
-  FaFacebook,
+  FaFacebookF,
   FaInstagram,
-  FaPinterest,
+  FaPinterestP,
   FaDiscord,
 } from 'react-icons/fa';
 // import images
@@ -30,9 +30,9 @@ export const heroData = {
 
 export const socialData = [
   { href: '/', icon: <FaYoutube /> },
-  { href: '/', icon: <FaFacebook /> },
+  { href: '/', icon: <FaFacebookF /> },
   { href: '/', icon: <FaInstagram /> },
-  { href: '/', icon: <FaPinterest /> },
+  { href: '/', icon: <FaPinterestP /> },
   { href: '/', icon: <FaDiscord /> },
 ];
 
@@ -156,9 +156,9 @@ export const footerData = {
     title: 'social network',
     icons: [
       { href: '/', icon: <FaYoutube /> },
-      { href: '/', icon: <FaFacebook /> },
+      { href: '/', icon: <FaFacebookF /> },
       { href: '/', icon: <FaInstagram /> },
-      { href: '/', icon: <FaPinterest /> },
+      { href: '/', icon: <FaPinterestP /> },
       { href: '/', icon: <FaDiscord /> },
     ],
   },

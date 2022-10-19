@@ -1,6 +1,7 @@
 import React from 'react';
 // components
 import Newsletter from './Newsletter';
+import Copyright from './Copyright';
 // import data
 import { footerData } from '../data';
 
@@ -8,63 +9,60 @@ const Footer = () => {
   // destructure footer data
   const { contact, hours, social } = footerData;
   return (
-    <footer className='relative top-96 z-20 py-[80px] xl:pt-[120px] bg-footer bg-cover bg-no-repeat bg-center lg:h-[620px]'>
-      <div className='container mx-auto h-full flex flex-col items-center gap-y-12 lg:gap-y-0'>
-        {/* neswletter */}
-        <div className='w-full xl:mb-[52px]'>
+    <footer className='relative top-96 z-20 bg-dark lg:bg-transparent lg:h-[620px] lg:bg-footer lg:bg-center lg:bg-no-repeat py-20'>
+      <div className='container mx-auto h-full'>
+        {/* newsletter & footer info */}
+        <div className='h-full flex flex-col gap-y-12'>
+          {/* newsletter */}
           <Newsletter />
-        </div>
-        {/* info */}
-        <div className='flex flex-col xl:flex-row text-white/40 capitalize w-full max-w-[1100px] text-center xl:text-left gap-y-12'>
-          {/* contact */}
-          <div className='flex-1'>
-            <div className='text-[20px] lg:text-[24px] font-primary capitalize mb-4 text-white'>
-              {contact.title}
+          {/* info */}
+          <div className='flex flex-col lg:flex-row lg:gap-x-[130px] gap-y-12 lg:gap-y-0'>
+            {/* contact */}
+            <div className='flex-1 lg:max-w-[170px]'>
+              <div className='text-[20px] lg:text-[22px] font-normal  text-white font-primary capitalize mb-[22px]'>
+                {contact.title}
+              </div>
+              <div className='capitalize'>{contact.address}</div>
+              <div className='capitalize'>{contact.phone}</div>
             </div>
-            <div className='max-w-[160px]'>
-              <div className='text-base'>{contact.address}</div>
-              <div className='text-base font-bold'>{contact.phone}</div>
-            </div>
-          </div>
-          {/* hours */}
-          <div className='w-full xl:w-[50%] flex flex-col xl:items-center'>
-            <div>
-              {/* title */}
-              <div className='text-[20px] lg:text-[24px] font-primary capitalize mb-4 text-white self-start'>
+            {/* program */}
+            <div className='flex-1'>
+              <div className='text-[20px] lg:text-[22px] font-normal  text-white font-primary capitalize mb-[22px]'>
                 {hours.title}
               </div>
-              {/* program */}
-              <div className='flex flex-col lg:flex-row justify-center lg:gap-x-[24px]'>
+              <div className='flex gap-x-[46px]'>
                 {hours.program.map((item, index) => {
                   return (
-                    <div key={index}>
-                      <div className='mb-2'>{item.days}</div>
-                      <div className='lg:text-[24px] text-accent'>
-                        {item.hours}
+                    <div className='capitalize' key={index}>
+                      <div>
+                        <div>{item.days}</div>
+                        <div className='text-[20px] text-accent'>
+                          {item.hours}
+                        </div>
                       </div>
                     </div>
                   );
                 })}
               </div>
             </div>
-          </div>
-          {/* social */}
-          <div className='flex-1'>
-            <div className='text-[20px] lg:text-[24px] font-primary capitalize mb-4 text-white'>
-              {social.title}
-            </div>
-            <div className='flex gap-x-[10px] justify-center xl:justify-start'>
-              {social.icons.map((item, index) => {
-                return (
-                  <a
-                    href={item.href}
-                    className='border border-white/30 p-2 rounded-full text-base w-9 h-9 flex justify-center items-center hover:text-accent hover:border-accent transition'
-                    key={index}
-                  >
-                    <div>{item.icon}</div>
-                  </a>
-                );
-              })}
+            {/* social */}
+            <div className='flex-1 lg:max-w-[280px]'>
+              <div className='text-[20px] lg:text-[22px] font-normal  text-white font-primary capitalize mb-[22px]'>
+                {social.title}
+              </div>
+              <div className='flex gap-x-[10px]'>
+                {social.icons.map((icon, index) => {
+                  return (
+                    <a
+                      href={icon.href}
+                      className='border rounded-full border-white/20 w-[35px] h-[35px] flex items-center justify-center text-sm'
+                      key={index}
+                    >
+                      {icon.icon}
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
