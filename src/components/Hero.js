@@ -17,31 +17,34 @@ const Hero = () => {
       <div className='container mx-auto min-h-[980px] flex justify-center items-center'>
         {/* text */}
         <motion.div
-          variants={staggerContainer(0.3, 2)}
+          variants={staggerContainer(0.3, 1)}
           initial='hidden'
-          animate={'show'}
+          whileInView={'show'}
           className='text-center flex flex-col items-center'
         >
           {/* pretitle */}
           <motion.div
-            variants={fadeIn('down', 1.2)}
+            variants={fadeIn('down', 'tween', 0.2, 1.1)}
             className='text-white text-[24px] lg:text-[28px] font-primary italic lg:font-medium mb-1'
           >
             {pretitle}
           </motion.div>
           {/* title */}
-          <motion.h1 variants={fadeIn('down', 1.6)} className='h1 mb-5'>
+          <motion.h1
+            variants={fadeIn('down', 'tween', 0.3, 1.1)}
+            className='h1 mb-5'
+          >
             {title}
           </motion.h1>
           {/* subtitle */}
           <motion.p
-            variants={fadeIn('down', 2)}
+            variants={fadeIn('down', 'tween', 0.4, 1.1)}
             className='text-white max-w-[540px] mb-8'
           >
             {subtitle}
           </motion.p>
           {/* button */}
-          <motion.div variants={fadeIn('down', 2.4)}>
+          <motion.div variants={fadeIn('down', 'tween', 0.5, 1.1)}>
             <button className='btn'>{btnText}</button>
           </motion.div>
         </motion.div>

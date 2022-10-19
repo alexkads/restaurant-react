@@ -74,7 +74,7 @@ const Header = () => {
         <div className='text-white flex justify-between items-center px-4 lg:px-0 relative'>
           {/* menu btn */}
           <motion.div
-            variants={fadeIn('down')}
+            variants={fadeIn('down', 'tween', 1, 1.8)}
             className={`${
               navMobile ? 'gap-y-0' : 'gap-y-2'
             } flex flex-col items-center justify-center w-12 h-12 p-3 order-2 lg:order-none cursor-pointer border-2 rounded-full`}
@@ -100,7 +100,7 @@ const Header = () => {
           </motion.div>
           {/* logo */}
           <motion.div
-            variants={fadeIn('down')}
+            variants={fadeIn('down', 'tween', 1.2, 1.8)}
             className='order-1 lg:order-none lg:ml-[11rem]'
           >
             <a href='#'>
@@ -114,7 +114,10 @@ const Header = () => {
             </a>
           </motion.div>
           {/* social icons */}
-          <motion.div variants={fadeIn('down')} className='hidden lg:flex'>
+          <motion.div
+            variants={fadeIn('down', 'tween', 1.4, 1.8)}
+            className='hidden lg:flex'
+          >
             <Socials />
           </motion.div>
           {/* nav mobile */}
