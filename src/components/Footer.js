@@ -9,14 +9,14 @@ const Footer = () => {
   // destructure footer data
   const { contact, hours, social } = footerData;
   return (
-    <footer className='relative top-96 z-20 bg-dark lg:bg-transparent lg:h-[620px] lg:bg-footer lg:bg-center lg:bg-no-repeat py-20'>
+    <footer className='relative top-96 z-20 bg-dark lg:bg-transparent lg:min-h-[620px] lg:bg-footer lg:bg-center lg:bg-no-repeat pt-20'>
       <div className='container mx-auto h-full'>
         {/* newsletter & footer info */}
         <div className='h-full flex flex-col gap-y-12'>
           {/* newsletter */}
           <Newsletter />
           {/* info */}
-          <div className='flex flex-col lg:flex-row lg:gap-x-[130px] gap-y-12 lg:gap-y-0'>
+          <div className='flex flex-col lg:flex-row lg:gap-x-[130px] gap-y-12 lg:gap-y-0 lg:mb-12'>
             {/* contact */}
             <div className='flex-1 lg:max-w-[170px]'>
               <div className='text-[20px] lg:text-[22px] font-normal  text-white font-primary capitalize mb-[22px]'>
@@ -46,7 +46,7 @@ const Footer = () => {
               </div>
             </div>
             {/* social */}
-            <div className='flex-1 lg:max-w-[280px]'>
+            <div className='flex-1 lg:max-w-[280px] mb-12'>
               <div className='text-[20px] lg:text-[22px] font-normal  text-white font-primary capitalize mb-[22px]'>
                 {social.title}
               </div>
@@ -55,7 +55,7 @@ const Footer = () => {
                   return (
                     <a
                       href={icon.href}
-                      className='border rounded-full border-white/20 w-[35px] h-[35px] flex items-center justify-center text-sm'
+                      className='border rounded-full border-white/20 w-[35px] h-[35px] flex items-center justify-center text-sm hover:text-accent hover:border-accent transition-all'
                       key={index}
                     >
                       {icon.icon}
@@ -66,6 +66,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <Copyright />
       </div>
     </footer>
   );
