@@ -19,22 +19,22 @@ const Menu = () => {
           variants={staggerContainer}
           initial='hidden'
           whileInView={'show'}
-          viewport={{ once: false, amount: 0.8 }}
+          viewport={{ once: false, amount: 0.1 }}
           className='container mx-auto flex flex-col items-center text-center'
         >
           <motion.h2
-            variants={fadeIn('up', 1.6)}
+            variants={fadeIn('down', 'tween', 0.2, 1.6)}
             className='h2 capitalize text-white max-w-[400px] text-center'
           >
             {title}
           </motion.h2>
           <motion.p
-            variants={fadeIn('up', 2)}
+            variants={fadeIn('down', 'tween', 0.4, 1.6)}
             className='text-white/70 capitalize  mb-8'
           >
             {subtitle}
           </motion.p>
-          <motion.div variants={fadeIn('up', 2.4)}>
+          <motion.div variants={fadeIn('down', 'tween', 0.6, 1.6)}>
             <img src={modelImg} alt='' />
           </motion.div>
         </motion.div>
