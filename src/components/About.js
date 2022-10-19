@@ -16,7 +16,7 @@ const About = () => {
           variants={staggerContainer}
           initial='hidden'
           whileInView={'show'}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: false, amount: 0.6 }}
           className='flex flex-col lg:flex-row items-center min-h-[620px]'
         >
           {/* text */}

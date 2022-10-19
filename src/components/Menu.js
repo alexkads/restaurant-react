@@ -1,6 +1,10 @@
 import React from 'react';
 // import data
 import { menuData } from '../data';
+// import motion
+import { motion } from 'framer-motion';
+// import variants
+import { fadeIn, staggerContainer } from '../variants';
 
 const Menu = () => {
   // destructure menu data
@@ -11,18 +15,48 @@ const Menu = () => {
       <div className='h-[780px] bg-menu absolute w-full max-w-[1800px] -z-0'></div>
       {/* text */}
       <div className='relative z-10 top-72 lg:top-52'>
-        <div className='container mx-auto flex flex-col items-center text-center'>
-          <h2 className='h2 capitalize text-white max-w-[400px] text-center'>
+        <motion.div
+          variants={staggerContainer}
+          initial='hidden'
+          whileInView={'show'}
+          viewport={{ once: false, amount: 0.8 }}
+          className='container mx-auto flex flex-col items-center text-center'
+        >
+          <motion.h2
+            variants={fadeIn('up', 1.6)}
+            className='h2 capitalize text-white max-w-[400px] text-center'
+          >
             {title}
-          </h2>
-          <p className='text-white/70 capitalize  mb-8'>{subtitle}</p>
-          <div>
+          </motion.h2>
+          <motion.p
+            variants={fadeIn('up', 2)}
+            className='text-white/70 capitalize  mb-8'
+          >
+            {subtitle}
+          </motion.p>
+          <motion.div variants={fadeIn('up', 2.4)}>
             <img src={modelImg} alt='' />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
       {/* image gallery */}
-      <div className='relative top-80 lg:top-96'>
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 150,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          type: 'tween',
+          delay: 0.2,
+          duration: 1.6,
+          ease: 'easeOut',
+        }}
+        className='relative top-80 lg:top-96'
+      >
         <div className='container mx-auto'>
           <div className='lg:-mt-24 min-h-[590px] z-30 mb-8 md:mb-4 xl:mb-16'>
             <div className='grid grid-cols-1 lg:grid-cols-4 min-h-[590px]'>
@@ -62,7 +96,7 @@ const Menu = () => {
           </div>
           <button className='btn mx-auto capitalize'>{btnText}</button>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
