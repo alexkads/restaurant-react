@@ -10,7 +10,7 @@ export const fadeIn = (direction, duration) => {
       y: 0,
       opacity: 1,
       transition: {
-        type: 'tween',
+        type: 'spring',
         duration: duration,
         // ease: [0.25, 0.25, 0.25, 0.75],
       },
@@ -41,7 +41,7 @@ export const plateVariants = {
     transition: {
       type: 'spring',
       duration: 2,
-      delay: 0.6,
+      delay: 0.3,
     },
   },
 };

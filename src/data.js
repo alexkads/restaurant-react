@@ -20,6 +20,16 @@ import Avatar1 from '../src/assets/img/testimonial/avatar1.png';
 import Avatar2 from '../src/assets/img/testimonial/avatar2.png';
 import Avatar3 from '../src/assets/img/testimonial/avatar3.png';
 
+export const navData = [
+  { href: '/', name: 'home' },
+  { href: '/', name: 'about' },
+  { href: '/', name: 'menu' },
+  { href: '/', name: 'team' },
+  { href: '/', name: 'testimonials' },
+  { href: '/', name: 'book a table' },
+  { href: '/', name: 'contact' },
+];
+
 export const heroData = {
   pretitle: 'Nothing brings together like',
   title: 'Bistro Cafe',

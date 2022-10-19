@@ -3,6 +3,10 @@ import React from 'react';
 import { heroData } from '../data.js';
 // import components
 import Header from './Header.js';
+// import motion
+import { motion } from 'framer-motion';
+// import variants
+import { fadeIn, staggerContainer } from '../variants';
 
 const Hero = () => {
   // destructure hero data
@@ -12,20 +16,35 @@ const Hero = () => {
       <Header />
       <div className='container mx-auto min-h-[980px] flex justify-center items-center'>
         {/* text */}
-        <div className='text-center flex flex-col items-center'>
+        <motion.div
+          variants={staggerContainer(0.3, 2)}
+          initial='hidden'
+          animate={'show'}
+          className='text-center flex flex-col items-center'
+        >
           {/* pretitle */}
-          <div className='text-white text-[24px] lg:text-[28px] font-primary italic lg:font-medium mb-1'>
+          <motion.div
+            variants={fadeIn('down', 1.2)}
+            className='text-white text-[24px] lg:text-[28px] font-primary italic lg:font-medium mb-1'
+          >
             {pretitle}
-          </div>
+          </motion.div>
           {/* title */}
-          <h1 className='h1 mb-5'>{title}</h1>
+          <motion.h1 variants={fadeIn('down', 1.6)} className='h1 mb-5'>
+            {title}
+          </motion.h1>
           {/* subtitle */}
-          <p className='text-white max-w-[540px] mb-8'>{subtitle}</p>
+          <motion.p
+            variants={fadeIn('down', 2)}
+            className='text-white max-w-[540px] mb-8'
+          >
+            {subtitle}
+          </motion.p>
           {/* button */}
-          <div>
+          <motion.div variants={fadeIn('down', 2.4)}>
             <button className='btn'>{btnText}</button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

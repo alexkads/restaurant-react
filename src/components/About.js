@@ -21,7 +21,7 @@ const About = () => {
         >
           {/* text */}
           <motion.div
-            variants={fadeIn('right', 1.1)}
+            variants={fadeIn('right', 1.6)}
             className='flex-1 text-center lg:text-left'
           >
             <div className='pretitle'>{pretitle}</div>
