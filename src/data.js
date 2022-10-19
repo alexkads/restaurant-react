@@ -144,11 +144,11 @@ export const footerData = {
     program: [
       {
         days: 'monday - friday',
-        hours: '09:00AM - 10:00PM',
+        hours: '09:00 AM - 10:00 PM',
       },
       {
         days: 'saturday - sunday',
-        hours: '09:00AM - 11:00PM',
+        hours: '09:00 AM - 11:00 PM',
       },
     ],
   },

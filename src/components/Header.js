@@ -106,7 +106,9 @@ const Header = () => {
             <a href='#'>
               <img
                 src={LogoWhite}
-                className={`${isActive ? 'w-[90px] h-[90px]' : ''}`}
+                className={`${
+                  isActive ? 'w-[90px] h-[90px]' : 'w-[107px] h-[107px]'
+                } transition-all duration-200`}
                 alt=''
               />
             </a>
