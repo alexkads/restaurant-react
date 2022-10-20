@@ -24,7 +24,7 @@ const Team = () => {
         <div className='flex flex-col lg:flex-row gap-x-[120px] items-center lg:items-start'>
           {/* text */}
           <motion.div
-            variants={fadeIn('down', 'tween', 0.4, 1.6)}
+            variants={fadeIn('down', 'tween', 0.6, 1.6)}
             initial='hidden'
             whileInView={'show'}
             className='flex-1 max-w-[540px] text-center lg:text-left lg:pt-16'
@@ -47,7 +47,7 @@ const Team = () => {
           </motion.div>
           {/* chef image */}
           <motion.div
-            variants={fadeIn('up', 'tween', 0.4, 1.6)}
+            variants={fadeIn('up', 'tween', 0.7, 1.6)}
             initial='hidden'
             whileInView={'show'}
             className='flex-1'
