@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 // import components
-import NavMobile from './NavMobile';
+import Nav from './Nav';
 import Socials from './Socials';
 // import images
 import LogoWhite from '../assets/img/header/logo-white.png';
@@ -26,18 +26,18 @@ const headerVariants = {
 
 export const navMobileVariants = {
   hidden: {
-    clipPath: 'circle(6.2% at 1% 1%)',
+    clipPath: 'circle(5.8% at 50% 0)',
     opacity: 0,
     transition: {
       type: 'spring',
       delay: 0.2,
       stiffness: 300,
-      damping: 40,
+      damping: 140,
     },
   },
   show: {
     opacity: 1,
-    clipPath: `circle(139.5% at 1% 2%)`,
+    clipPath: 'circle(130% at 50% 0)',
     transition: {
       type: 'spring',
       stiffness: 80,
@@ -127,7 +127,7 @@ const Header = () => {
             animate={navMobile ? 'show' : ''}
             className='absolute w-[310px] h-[50vh] bg-accent right-0 lg:left-0 top-[120px] bottom-0 z-50 rounded-lg shadow-xl'
           >
-            <NavMobile />
+            <Nav />
           </motion.div>
         </div>
       </motion.div>

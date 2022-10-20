@@ -2,9 +2,13 @@ import React from 'react';
 // components
 import Newsletter from './Newsletter';
 import Copyright from './Copyright';
+import Socials from './Socials';
 // import data
 import { footerData } from '../data';
-import Socials from './Socials';
+// import motion
+import { motion } from 'framer-motion';
+// import variants
+import { fadeIn, staggerContainer } from '../variants';
 
 const Footer = () => {
   // destructure footer data
@@ -13,11 +17,21 @@ const Footer = () => {
     <footer className='relative top-96 z-20 bg-dark lg:bg-transparent lg:min-h-[620px] lg:bg-footer lg:bg-center lg:bg-no-repeat pt-20'>
       <div className='container mx-auto h-full'>
         {/* newsletter & footer info */}
-        <div className='h-full flex flex-col gap-y-12'>
+        <motion.div
+          variants={staggerContainer}
+          initial='hidden'
+          whileInView={'show'}
+          className='h-full flex flex-col gap-y-12'
+        >
           {/* newsletter */}
-          <Newsletter />
+          <motion.div variants={fadeIn('up', 'tween', 0.4, 1.6)}>
+            <Newsletter />
+          </motion.div>
           {/* info */}
-          <div className='flex flex-col lg:flex-row lg:gap-x-[130px] gap-y-12 lg:gap-y-0 lg:mb-12'>
+          <motion.div
+            variants={fadeIn('up', 'tween', 0.6, 1.6)}
+            className='flex flex-col lg:flex-row lg:gap-x-[130px] gap-y-12 lg:gap-y-0 lg:mb-12'
+          >
             {/* contact */}
             <div className='flex-1 lg:max-w-[170px]'>
               <div className='text-[20px] lg:text-[22px] font-normal  text-white font-primary capitalize mb-[22px]'>
@@ -53,8 +67,9 @@ const Footer = () => {
               </div>
               <Socials />
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
+        {/* copyright */}
         <Copyright />
       </div>
     </footer>
