@@ -4,22 +4,19 @@ import { socialData } from '../data';
 
 const Socials = () => {
   return (
-    <ul className='flex gap-x-[10px]'>
-      {socialData.map((item, index) => {
-        // destructure item
-        const { href, icon } = item;
+    <div className='flex gap-x-[10px]'>
+      {socialData.map((icon, index) => {
         return (
-          <li
-            className='border rounded-full  w-9 h-9 flex items-center justify-center'
+          <a
+            href={icon.href}
+            className='border rounded-full border-white/20 w-[35px] h-[35px] flex items-center justify-center text-sm hover:text-accent hover:border-accent transition-all'
             key={index}
           >
-            <a className='text-sm' href={href}>
-              {icon}
-            </a>
-          </li>
+            {icon.icon}
+          </a>
         );
       })}
-    </ul>
+    </div>
   );
 };
 

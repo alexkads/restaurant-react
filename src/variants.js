@@ -41,8 +41,8 @@ export const plateVariants = {
     rotate: 0,
     transition: {
       type: 'spring',
-      duration: 2,
-      delay: 0.3,
+      duration: 1.8,
+      delay: 0.5,
     },
   },
 };

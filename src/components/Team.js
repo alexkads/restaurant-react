@@ -1,6 +1,10 @@
 import React from 'react';
 // data
 import { teamData } from '../data';
+// import motion
+import { motion } from 'framer-motion';
+// import variants
+import { fadeIn } from '../variants';
 
 const Team = () => {
   const {
@@ -19,7 +23,12 @@ const Team = () => {
         {/* text & image wrapper */}
         <div className='flex flex-col lg:flex-row gap-x-[120px] items-center lg:items-start'>
           {/* text */}
-          <div className='flex-1 max-w-[540px] text-center lg:text-left lg:pt-16'>
+          <motion.div
+            variants={fadeIn('down', 'tween', 0.2, 1.6)}
+            initial='hidden'
+            whileInView={'show'}
+            className='flex-1 max-w-[540px] text-center lg:text-left lg:pt-16'
+          >
             <div className='pretitle'>{pretitle}</div>
             <h2 className='h2 capitalize'>{title}</h2>
             <p className='mb-[60px]'>{sub1}</p>
@@ -35,11 +44,16 @@ const Team = () => {
             <div className='flex justify-center lg:justify-start mb-6 lg:mb-0'>
               <img src={signatureImg} alt='' />
             </div>
-          </div>
+          </motion.div>
           {/* chef image */}
-          <div className='flex-1'>
+          <motion.div
+            variants={fadeIn('up', 'tween', 0.2, 1.6)}
+            initial='hidden'
+            whileInView={'show'}
+            className='flex-1'
+          >
             <img src={chefImg} alt='' />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

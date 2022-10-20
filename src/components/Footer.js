@@ -4,6 +4,7 @@ import Newsletter from './Newsletter';
 import Copyright from './Copyright';
 // import data
 import { footerData } from '../data';
+import Socials from './Socials';
 
 const Footer = () => {
   // destructure footer data
@@ -50,19 +51,7 @@ const Footer = () => {
               <div className='text-[20px] lg:text-[22px] font-normal  text-white font-primary capitalize mb-[22px]'>
                 {social.title}
               </div>
-              <div className='flex gap-x-[10px]'>
-                {social.icons.map((icon, index) => {
-                  return (
-                    <a
-                      href={icon.href}
-                      className='border rounded-full border-white/20 w-[35px] h-[35px] flex items-center justify-center text-sm hover:text-accent hover:border-accent transition-all'
-                      key={index}
-                    >
-                      {icon.icon}
-                    </a>
-                  );
-                })}
-              </div>
+              <Socials />
             </div>
           </div>
         </div>

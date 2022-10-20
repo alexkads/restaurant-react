@@ -10,7 +10,7 @@ const NavMobile = () => {
           return (
             <li key={index}>
               <a
-                className='text-[20px] capitalize font-primary italic hover:text-dark transition-all'
+                className='text-[20px] capitalize font-secondary italic hover:text-dark transition-all duration-300'
                 href={item.href}
               >
                 {item.name}
