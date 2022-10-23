@@ -1,8 +1,8 @@
 import React from 'react';
-// import hero data
-import { heroData } from '../data.js';
+// import data
+import { heroData } from '../data';
 // import components
-import Header from './Header.js';
+import Header from './Header';
 // import motion
 import { motion } from 'framer-motion';
 // import variants
@@ -12,7 +12,8 @@ const Hero = () => {
   // destructure hero data
   const { pretitle, title, subtitle, btnText } = heroData;
   return (
-    <section className='bg-hero min-h-[980px] bg-cover bg-right'>
+    <section className='min-h-[980px] bg-hero bg-cover bg-right'>
+      {/* header */}
       <Header />
       <div className='container mx-auto min-h-[980px] flex justify-center items-center'>
         {/* text */}

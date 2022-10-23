@@ -3,10 +3,11 @@ import React, { useState } from 'react';
 import { reservationData } from '../data';
 // import datepicker
 import DatePicker from 'react-datepicker';
+// import datepicker css
 import 'react-datepicker/dist/react-datepicker.css';
 // import timepicker
 import TimePicker from 'react-time-picker';
-// import 'react-time-picker/dist/TimePicker.css';
+// import timepicker css
 import '../timepicker.css';
 // import icons
 import { FaUsers, FaCalendar, FaClock } from 'react-icons/fa';
@@ -18,8 +19,11 @@ import { fadeIn, staggerContainer } from '../variants';
 const Reservation = () => {
   // destructure reservation data
   const { title, subtitle, modelImg, btnText } = reservationData;
+  // date state
   const [startDate, setStartDate] = useState(new Date());
+  // clock state
   const [value, setValue] = useState('10:00');
+
   return (
     <section className='relative top-96 z-30 pb-20 lg:py-[100px]'>
       <div className='container mx-auto'>
@@ -62,7 +66,7 @@ const Reservation = () => {
             {/* datepicker */}
             <div>
               <div className='flex items-center gap-x-[10px] font-semibold text-dark text-base mb-3'>
-                <FaCalendar className='text-base text-dark/70' />
+                <FaCalendar />
                 <div>Choose Date</div>
               </div>
               <DatePicker
@@ -74,7 +78,7 @@ const Reservation = () => {
             {/* timepicker */}
             <div>
               <div className='flex items-center gap-x-[10px] font-semibold text-dark text-base mb-3'>
-                <FaClock className='text-base text-dark/70' />
+                <FaClock />
                 <div>Choose Time</div>
               </div>
               <TimePicker
@@ -85,16 +89,17 @@ const Reservation = () => {
                 value={value}
               />
             </div>
-            {/* person number input */}
+            {/* person number */}
             <div>
               <div className='flex items-center gap-x-[10px] font-semibold text-dark text-base mb-3'>
-                <FaUsers className='text-lg text-dark/70' />
+                <FaUsers />
                 <div>How many people?</div>
               </div>
               <input className='input' type='text' placeholder='1' />
             </div>
           </div>
-          <div className='flex justify-center max-w-[316px] mx-auto'>
+          {/* button */}
+          <div className='max-w-[316px] mx-auto flex justify-center'>
             <button className='btn capitalize w-full lg:w-auto'>
               {btnText}
             </button>

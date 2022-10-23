@@ -1,5 +1,5 @@
 import React from 'react';
-// data
+// import data
 import { teamData } from '../data';
 // import motion
 import { motion } from 'framer-motion';
@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 
 const Team = () => {
+  // destructure team data
   const {
     pretitle,
     title,
@@ -18,23 +19,23 @@ const Team = () => {
     chefImg,
   } = teamData;
   return (
-    <section className='relative z-10 top-96 lg:top-[480px] min-h-[720px]'>
+    <section className='relative top-96 z-10 lg:top-[480px] min-h-[720px]'>
       <div className='container mx-auto'>
         {/* text & image wrapper */}
-        <div className='flex flex-col lg:flex-row gap-x-[120px] items-center lg:items-start'>
+        <div className='flex flex-col lg:flex-row lg:gap-x-[120px] items-center lg:items-start'>
           {/* text */}
           <motion.div
             variants={fadeIn('down', 'tween', 0.6, 1.6)}
             initial='hidden'
             whileInView={'show'}
-            className='flex-1 max-w-[540px] text-center lg:text-left lg:pt-16'
+            className='flex-1 text-center lg:text-left lg:pt-16'
           >
             <div className='pretitle'>{pretitle}</div>
             <h2 className='h2 capitalize'>{title}</h2>
             <p className='mb-[60px]'>{sub1}</p>
             <p>{sub2}</p>
             <div className='my-[26px]'>
-              <div className='text-2xl font-semibold capitalize text-accent'>
+              <div className='text-2xl capitalize font-semibold text-accent'>
                 {name}
               </div>
               <div className='text-[15px] font-semibold capitalize text-grey/70'>
@@ -45,7 +46,7 @@ const Team = () => {
               <img src={signatureImg} alt='' />
             </div>
           </motion.div>
-          {/* chef image */}
+          {/* image */}
           <motion.div
             variants={fadeIn('up', 'tween', 0.7, 1.6)}
             initial='hidden'
